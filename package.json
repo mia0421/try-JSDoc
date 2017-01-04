@@ -1,0 +1,31 @@
+{
+  "name": "try-jsdoc",
+  "version": "0.0.1",
+  "description": "展示JSDoc應用",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mia0421/try-JSDoc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mia0421/try-JSDoc/issues"
+  },
+  "homepage": "https://github.com/mia0421/try-JSDoc#readme",
+  "devDependencies": {
+    "angular": "^1.4.8",
+    "browser-sync": "^2.10.0",
+    "docdash": "^0.4.0",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-jsdoc": "^0.1.5",
+    "gulp-jsdoc3": "^1.0.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-typescript": "^2.10.0",
+    "jsdoc": "^3.4.3"
+  }
+}

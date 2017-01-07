@@ -1,4 +1,43 @@
-/// <reference path="../../typings/angularjs/angular.d.ts"/>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>TypeScripts/Components/addressDirective.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="NineYi.Mall.Controllers_PromotionListController.html">PromotionListController</a><ul class='methods'><li data-type='method'><a href="NineYi.Mall.Controllers_PromotionListController.html#ChangeOrderBy">ChangeOrderBy</a></li><li data-type='method'><a href="NineYi.Mall.Controllers_PromotionListController.html#GetNextPage">GetNextPage</a></li><li data-type='method'><a href="NineYi.Mall.Controllers_PromotionListController.html#GetPromotionList">GetPromotionList</a></li><li data-type='method'><a href="NineYi.Mall.Controllers_PromotionListController.html#HidePromotion">HidePromotion</a></li><li data-type='method'><a href="NineYi.Mall.Controllers_PromotionListController.html#TrackEvent">TrackEvent</a></li></ul></li><li><a href="NineYi.Mall.Directives_nsAddress.html">nsAddress</a></li><li><a href="NineYi.Mall.Services_PromotionV2Service.html">PromotionV2Service</a><ul class='methods'><li data-type='method'><a href="NineYi.Mall.Services_PromotionV2Service.html#Calculate">Calculate</a></li><li data-type='method'><a href="NineYi.Mall.Services_PromotionV2Service.html#GetDetail">GetDetail</a></li><li data-type='method'><a href="NineYi.Mall.Services_PromotionV2Service.html#GetList">GetList</a></li><li data-type='method'><a href="NineYi.Mall.Services_PromotionV2Service.html#GetSalePageList">GetSalePageList</a></li></ul></li><li><a href="NineYi.Theme.Components_CategoryMenuController.html">CategoryMenuController</a><ul class='methods'><li data-type='method'><a href="NineYi.Theme.Components_CategoryMenuController.html#SelectLevel1List">SelectLevel1List</a></li><li data-type='method'><a href="NineYi.Theme.Components_CategoryMenuController.html#SetActiveLink">SetActiveLink</a></li><li data-type='method'><a href="NineYi.Theme.Components_CategoryMenuController.html#TrackEvent">TrackEvent</a></li></ul></li></ul><h3>Namespaces</h3><ul><li><a href="NineYi.Mall.Controllers.html">Controllers</a></li><li><a href="NineYi.Mall.Directives.html">Directives</a></li><li><a href="NineYi.Mall.Services.html">Services</a></li><li><a href="NineYi.Theme.Components.html">Components</a></li></ul><h3>Tutorials</h3><ul><li><a href="tutorial-tutorials1.html">tutorials1</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">TypeScripts/Components/addressDirective.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/// &lt;reference path="../../typings/angularjs/angular.d.ts"/>
 /**
  Directives
  @namespace NineYi.Mall.Directives
@@ -30,8 +69,8 @@ var NineYi;
                      * @param {string} employee.department - The employee's department.
                      *
                      * @example
-                     * <caption>我是範例</caption>
-                     * <div ns-address
+                     * &lt;caption>我是範例&lt;/caption>
+                     * &lt;div ns-address
                      *      ns-city="city"
                      *      ns-zipcode="zipcode"
                      *      ns-district="district"
@@ -39,7 +78,7 @@ var NineYi;
                      *      ns-form-title="title"
                      *      ns-is-required="true"
                      *      ns-submitted="true">
-                     * </div>
+                     * &lt;/div>
                      */
                     return {
                         link: function (scope, element, attributes, ctrl) {
@@ -53,7 +92,7 @@ var NineYi;
                                     }
                                 }
                                 //// 若載入時地址未選，且預選地址已有資料，將地址設定為預選地址
-                                if (!scope.City && newVal) {
+                                if (!scope.City &amp;&amp; newVal) {
                                     scope.City = newVal.City;
                                 }
                             });
@@ -94,4 +133,22 @@ var NineYi;
         })(Directives = Mall.Directives || (Mall.Directives = {}));
     })(Mall = NineYi.Mall || (NineYi.Mall = {}));
 })(NineYi || (NineYi = {}));
-//# sourceMappingURL=addressDirective.js.map
+//# sourceMappingURL=addressDirective.js.map</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Sat Jan 07 2017 02:00:22 GMT+0800 (CST) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

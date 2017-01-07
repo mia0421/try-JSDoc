@@ -171,8 +171,7 @@ var NineYi;
                 };
                 /**
                  * 瀑布流取得下50筆
-                 * @param {boolean} OrderByName 排序方式( 最新活動:Newest / 即將結束:ComingToEnd )
-                 * @constructor
+                 * @method  NineYi.Mall.Controllers#PromotionListController#GetNextPage
                  */
                 PromotionListController.prototype.GetNextPage = function () {
                     var _this = this;
@@ -192,11 +191,11 @@ var NineYi;
                 };
                 /**
                  * 取得活動列表資料
+                 * @method  NineYi.Mall.Controllers#PromotionListController#GetPromotionList
                  * @param {number} ShopId 商店ID
                  * @param {string} OrderBy 排序方式
                  * @param {number} StartIndex 起始筆數
                  * @param {number} PageSize 共取幾筆
-                 * @constructor
                  */
                 PromotionListController.prototype.GetPromotionList = function (ShopId, OrderBy, StartIndex, PageSize) {
                     var _this = this;
@@ -233,8 +232,8 @@ var NineYi;
                 };
                 /**
                  * 倒數計時時移除該活動
+                 * @method  NineYi.Mall.Controllers#PromotionListController#HidePromotion
                  * @param {Date} EndDateTime 活動結束時
-                 * @constructor
                  */
                 PromotionListController.prototype.HidePromotion = function (EndDateTime) {
                     var deleteIndex = 0;
@@ -246,8 +245,8 @@ var NineYi;
                     this.PromotionList.splice(deleteIndex, 1);
                 };
                 /**
-                 * GA
-                 * @constructor
+                 * GA Track Event
+                 * @method  NineYi.Mall.Controllers#PromotionListController#TrackEvent
                  */
                 PromotionListController.prototype.TrackEvent = function (Category, Action, Label, Value) {
                     this.GoogleAnalyticsUtility.TrackEvent(Category, Action, Label, Value);

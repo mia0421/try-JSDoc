@@ -1,4 +1,8 @@
 /// <reference path="../../typings/angularjs/angular.d.ts"/>
+/**
+ Directives
+ @namespace NineYi.Mall.Directives
+ */
 var NineYi;
 (function (NineYi) {
     var Mall;
@@ -7,6 +11,36 @@ var NineYi;
         (function (Directives) {
             angular.module('NineYi.Mall.Directives')
                 .directive('nsAddress', ['$log', 'ZipCodeService', function ($log, zipCodeService) {
+                    /**
+                     * @class NineYi.Mall.Directives#nsAddress
+                     * @classdesc
+                     * ## 地址元件
+                     * 固定格式用於選擇城市行政區並且輸入地址的表單
+                     *
+                     * @param {string} nsCity 城市選單
+                     * @param {string} nsZipcode 當前郵遞區號
+                     * @param {string} nsDistrict 行政區
+                     * @param {string} nsAddressdetail 地址
+                     * @param {string} nsFormTitle 表單抬頭
+                     * @param {string} nsIsRequired 是否必填
+                     * @param {string=} nsSubmitted 是否已經Submitted
+                     *
+                     * @param {Object} employee - The employee who is responsible for the project.
+                     * @param {string} employee.name - The name of the employee.
+                     * @param {string} employee.department - The employee's department.
+                     *
+                     * @example
+                     * <caption>我是範例</caption>
+                     * <div ns-address
+                     *      ns-city="city"
+                     *      ns-zipcode="zipcode"
+                     *      ns-district="district"
+                     *      ns-addressdetail="addressdetail"
+                     *      ns-form-title="title"
+                     *      ns-is-required="true"
+                     *      ns-submitted="true">
+                     * </div>
+                     */
                     return {
                         link: function (scope, element, attributes, ctrl) {
                             scope.$watch(function () { return ctrl.SelectedCity; }, function (newVal, oldVal) {
@@ -494,8 +528,7 @@ var NineYi;
                 };
                 /**
                  * 瀑布流取得下50筆
-                 * @param {boolean} OrderByName 排序方式( 最新活動:Newest / 即將結束:ComingToEnd )
-                 * @constructor
+                 * @method  NineYi.Mall.Controllers#PromotionListController#GetNextPage
                  */
                 PromotionListController.prototype.GetNextPage = function () {
                     var _this = this;
@@ -515,11 +548,11 @@ var NineYi;
                 };
                 /**
                  * 取得活動列表資料
+                 * @method  NineYi.Mall.Controllers#PromotionListController#GetPromotionList
                  * @param {number} ShopId 商店ID
                  * @param {string} OrderBy 排序方式
                  * @param {number} StartIndex 起始筆數
                  * @param {number} PageSize 共取幾筆
-                 * @constructor
                  */
                 PromotionListController.prototype.GetPromotionList = function (ShopId, OrderBy, StartIndex, PageSize) {
                     var _this = this;
@@ -556,8 +589,8 @@ var NineYi;
                 };
                 /**
                  * 倒數計時時移除該活動
+                 * @method  NineYi.Mall.Controllers#PromotionListController#HidePromotion
                  * @param {Date} EndDateTime 活動結束時
-                 * @constructor
                  */
                 PromotionListController.prototype.HidePromotion = function (EndDateTime) {
                     var deleteIndex = 0;
@@ -569,8 +602,8 @@ var NineYi;
                     this.PromotionList.splice(deleteIndex, 1);
                 };
                 /**
-                 * GA
-                 * @constructor
+                 * GA Track Event
+                 * @method  NineYi.Mall.Controllers#PromotionListController#TrackEvent
                  */
                 PromotionListController.prototype.TrackEvent = function (Category, Action, Label, Value) {
                     this.GoogleAnalyticsUtility.TrackEvent(Category, Action, Label, Value);

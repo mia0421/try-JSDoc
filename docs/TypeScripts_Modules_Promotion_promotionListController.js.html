@@ -22,7 +22,7 @@
 <label for="nav-trigger" class="overlay"></label>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="-_anonymous_-PromotionListController_GetNextPage.html">GetNextPage</a></li><li><a href="-_anonymous_-PromotionListController_GetPromotionList.html">GetPromotionList</a></li><li><a href="-_anonymous_-PromotionListController_HidePromotion.html">HidePromotion</a></li><li><a href="-_anonymous_-PromotionListController_TrackEvent.html">TrackEvent</a></li><li><a href="NineYi.Mall.Controllers_PromotionListController.html">PromotionListController</a><ul class='methods'><li data-type='method'><a href="NineYi.Mall.Controllers_PromotionListController.html#ChangeOrderBy">ChangeOrderBy</a></li></ul></li><li><a href="NineYi.Mall.Services_PromotionV2Service.html">PromotionV2Service</a><ul class='methods'><li data-type='method'><a href="NineYi.Mall.Services_PromotionV2Service.html#Calculate">Calculate</a></li><li data-type='method'><a href="NineYi.Mall.Services_PromotionV2Service.html#GetDetail">GetDetail</a></li><li data-type='method'><a href="NineYi.Mall.Services_PromotionV2Service.html#GetList">GetList</a></li><li data-type='method'><a href="NineYi.Mall.Services_PromotionV2Service.html#GetSalePageList">GetSalePageList</a></li></ul></li><li><a href="NineYi.Theme.Components_CategoryMenuController.html">CategoryMenuController</a><ul class='methods'><li data-type='method'><a href="NineYi.Theme.Components_CategoryMenuController.html#SelectLevel1List">SelectLevel1List</a></li><li data-type='method'><a href="NineYi.Theme.Components_CategoryMenuController.html#SetActiveLink">SetActiveLink</a></li><li data-type='method'><a href="NineYi.Theme.Components_CategoryMenuController.html#TrackEvent">TrackEvent</a></li></ul></li></ul><h3>Namespaces</h3><ul><li><a href="NineYi.Mall.Controllers.html">Controllers</a></li><li><a href="NineYi.Mall.Services.html">Services</a></li><li><a href="NineYi.Theme.Components.html">Components</a></li></ul><h3>Tutorials</h3><ul><li><a href="tutorial-tutorials1.html">tutorials1</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="NineYi.Mall.Controllers_PromotionListController.html">PromotionListController</a><ul class='methods'><li data-type='method'><a href="NineYi.Mall.Controllers_PromotionListController.html#ChangeOrderBy">ChangeOrderBy</a></li><li data-type='method'><a href="NineYi.Mall.Controllers_PromotionListController.html#GetNextPage">GetNextPage</a></li><li data-type='method'><a href="NineYi.Mall.Controllers_PromotionListController.html#GetPromotionList">GetPromotionList</a></li><li data-type='method'><a href="NineYi.Mall.Controllers_PromotionListController.html#HidePromotion">HidePromotion</a></li><li data-type='method'><a href="NineYi.Mall.Controllers_PromotionListController.html#TrackEvent">TrackEvent</a></li></ul></li><li><a href="NineYi.Mall.Directives_nsAddress.html">nsAddress</a></li><li><a href="NineYi.Mall.Services_PromotionV2Service.html">PromotionV2Service</a><ul class='methods'><li data-type='method'><a href="NineYi.Mall.Services_PromotionV2Service.html#Calculate">Calculate</a></li><li data-type='method'><a href="NineYi.Mall.Services_PromotionV2Service.html#GetDetail">GetDetail</a></li><li data-type='method'><a href="NineYi.Mall.Services_PromotionV2Service.html#GetList">GetList</a></li><li data-type='method'><a href="NineYi.Mall.Services_PromotionV2Service.html#GetSalePageList">GetSalePageList</a></li></ul></li><li><a href="NineYi.Theme.Components_CategoryMenuController.html">CategoryMenuController</a><ul class='methods'><li data-type='method'><a href="NineYi.Theme.Components_CategoryMenuController.html#SelectLevel1List">SelectLevel1List</a></li><li data-type='method'><a href="NineYi.Theme.Components_CategoryMenuController.html#SetActiveLink">SetActiveLink</a></li><li data-type='method'><a href="NineYi.Theme.Components_CategoryMenuController.html#TrackEvent">TrackEvent</a></li></ul></li></ul><h3>Namespaces</h3><ul><li><a href="NineYi.Mall.Controllers.html">Controllers</a></li><li><a href="NineYi.Mall.Directives.html">Directives</a></li><li><a href="NineYi.Mall.Services.html">Services</a></li><li><a href="NineYi.Theme.Components.html">Components</a></li></ul><h3>Tutorials</h3><ul><li><a href="tutorial-tutorials1.html">tutorials1</a></li></ul>
 </nav>
 
 <div id="main">
@@ -210,8 +210,7 @@ var NineYi;
                 };
                 /**
                  * 瀑布流取得下50筆
-                 * @param {boolean} OrderByName 排序方式( 最新活動:Newest / 即將結束:ComingToEnd )
-                 * @constructor
+                 * @method  NineYi.Mall.Controllers#PromotionListController#GetNextPage
                  */
                 PromotionListController.prototype.GetNextPage = function () {
                     var _this = this;
@@ -231,11 +230,11 @@ var NineYi;
                 };
                 /**
                  * 取得活動列表資料
+                 * @method  NineYi.Mall.Controllers#PromotionListController#GetPromotionList
                  * @param {number} ShopId 商店ID
                  * @param {string} OrderBy 排序方式
                  * @param {number} StartIndex 起始筆數
                  * @param {number} PageSize 共取幾筆
-                 * @constructor
                  */
                 PromotionListController.prototype.GetPromotionList = function (ShopId, OrderBy, StartIndex, PageSize) {
                     var _this = this;
@@ -272,8 +271,8 @@ var NineYi;
                 };
                 /**
                  * 倒數計時時移除該活動
+                 * @method  NineYi.Mall.Controllers#PromotionListController#HidePromotion
                  * @param {Date} EndDateTime 活動結束時
-                 * @constructor
                  */
                 PromotionListController.prototype.HidePromotion = function (EndDateTime) {
                     var deleteIndex = 0;
@@ -285,8 +284,8 @@ var NineYi;
                     this.PromotionList.splice(deleteIndex, 1);
                 };
                 /**
-                 * GA
-                 * @constructor
+                 * GA Track Event
+                 * @method  NineYi.Mall.Controllers#PromotionListController#TrackEvent
                  */
                 PromotionListController.prototype.TrackEvent = function (Category, Action, Label, Value) {
                     this.GoogleAnalyticsUtility.TrackEvent(Category, Action, Label, Value);
@@ -325,7 +324,7 @@ var NineYi;
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Sat Jan 07 2017 00:30:03 GMT+0800 (CST) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Sat Jan 07 2017 02:00:22 GMT+0800 (CST) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>

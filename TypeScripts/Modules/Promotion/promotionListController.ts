@@ -202,8 +202,7 @@ module NineYi.Mall.Controllers {
 
         /**
          * 瀑布流取得下50筆
-         * @param {boolean} OrderByName 排序方式( 最新活動:Newest / 即將結束:ComingToEnd )
-         * @constructor
+         * @method  NineYi.Mall.Controllers#PromotionListController#GetNextPage
          */
         GetNextPage():void {
             this.IsLoading = true;
@@ -224,11 +223,11 @@ module NineYi.Mall.Controllers {
 
         /**
          * 取得活動列表資料
+         * @method  NineYi.Mall.Controllers#PromotionListController#GetPromotionList
          * @param {number} ShopId 商店ID
          * @param {string} OrderBy 排序方式
          * @param {number} StartIndex 起始筆數
          * @param {number} PageSize 共取幾筆
-         * @constructor
          */
         GetPromotionList(ShopId:number, OrderBy:string, StartIndex:number, PageSize:number):ng.IPromise<void> {
             var defer = this.$q.defer<void>();
@@ -268,8 +267,8 @@ module NineYi.Mall.Controllers {
 
         /**
          * 倒數計時時移除該活動
+         * @method  NineYi.Mall.Controllers#PromotionListController#HidePromotion
          * @param {Date} EndDateTime 活動結束時
-         * @constructor
          */
         HidePromotion(EndDateTime:Date):void {
             var deleteIndex = 0;
@@ -282,8 +281,8 @@ module NineYi.Mall.Controllers {
         }
 
         /**
-         * GA
-         * @constructor
+         * GA Track Event
+         * @method  NineYi.Mall.Controllers#PromotionListController#TrackEvent
          */
         TrackEvent(Category:string, Action:string, Label?:string, Value?:number) {
             this.GoogleAnalyticsUtility.TrackEvent(Category, Action, Label, Value);

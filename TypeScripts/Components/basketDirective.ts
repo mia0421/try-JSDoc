@@ -1,5 +1,9 @@
 /// <reference path="../../typings/angularjs/angular.d.ts"/>
 
+/**
+ Directives
+ @namespace NineYi.Mall.Directives
+ */
 namespace NineYi.Mall.Directives {
     interface IBasketSalePageEntity {
         SalePageId: number;
@@ -47,7 +51,29 @@ namespace NineYi.Mall.Directives {
 
     }
 
-
+    /**
+     * @class NineYi.Mall.Directives#nsBasket
+     * @classdesc
+     * ## 菜籃選單
+     * 目前用於折扣活動明細頁
+     *
+     * @param {string} nsDiscountMessage 菜籃優惠提示訊息
+     * @param {function} nsConfirmToShop 呼叫加入購物車後呼叫function
+     * @param {function} nsSalepageList 已加入菜籃商品列表
+     *
+     *
+     * @example
+     * <caption>我是範例</caption>
+     * <div ns-address
+     *      ns-city="city"
+     *      ns-zipcode="zipcode"
+     *      ns-district="district"
+     *      ns-addressdetail="addressdetail"
+     *      ns-form-title="title"
+     *      ns-is-required="true"
+     *      ns-submitted="true">
+     * </div>
+     */
     export class BasketDirective implements ng.IDirective {
         static factory() {
             var directive = ($log:ng.ILogService, $timeout:ng.ITimeoutService, $sce:ng.ISCEService, DeviceValue:Values.DeviceValue) =>

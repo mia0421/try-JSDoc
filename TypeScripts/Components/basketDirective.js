@@ -5,6 +5,36 @@ var NineYi;
     (function (Mall) {
         var Directives;
         (function (Directives) {
+            /**
+             * @class NineYi.Mall.Directives#nsBasket
+             * @classdesc
+             * ## 菜籃選單
+             * 目前用於折扣活動明細頁
+             *
+             * @param {string} nsDiscountMessage 菜籃優惠提示訊息
+             * @param {function} nsConfirmToShop 呼叫加入購物車後呼叫function
+             * @param {IBasketSalePageEntity[]} nsSalepageList 已加入菜籃商品列表
+             * @param {number} nsSalepageList.SalePageId 商品Id
+             * @param {number} nsSalepageList.SaleProductSKUId 加入商品所選SKU Id
+             * @param {string} nsSalepageList.Title  商品名稱
+             * @param {string} nsSalepageList.SalePageImageUrl 商品圖片
+             * @param {number} nsSalepageList.Price 原價
+             * @param {number} nsSalepageList.SuggestPrice 建議售價
+             * @param {boolean} nsSalepageList.IsSoldOut 是否賣完
+             * @param {number} nsSalepageList.Qty 所選數量
+             * @param {string} nsSalepageList.SkuLevel1 第一層所選sku
+             * @param {string} nsSalepageList.SkuLevel2 第二層所選sku
+             * @param {?boolean} nsSalepageList.IsNew 是否為新加入
+             * @param {?boolean} nsSalepageList.IsRemove 是否被刪除
+             *
+             * @example
+             * <caption>我是範例</caption>
+             * <div ns-basket
+             *      ns-discount-message="Ctrl.message"
+             *      ns-salepage-list="Ctrl.salepageList"
+             *      ns-confirm-to-shop="Ctrl.AddToCart()">
+             * </div>
+             */
             var BasketDirective = (function () {
                 function BasketDirective($log, $timeout, $sce, DeviceValue) {
                     var _this = this;

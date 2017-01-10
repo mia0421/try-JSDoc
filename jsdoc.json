@@ -16,7 +16,8 @@
     "cleverLinks": false,
     "monospaceLinks": false,
     "default": {
-      "outputSourceFiles": true
+      "outputSourceFiles": true,
+      "useLongnameInNav":true
     }
   },
   "opts": {

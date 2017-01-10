@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>TypeScripts/app.module.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="NineYi.Mall.Controllers_PromotionListController.html">PromotionListController</a><ul class='methods'><li data-type='method'><a href="NineYi.Mall.Controllers_PromotionListController.html#ChangeOrderBy">ChangeOrderBy</a></li><li data-type='method'><a href="NineYi.Mall.Controllers_PromotionListController.html#GetNextPage">GetNextPage</a></li><li data-type='method'><a href="NineYi.Mall.Controllers_PromotionListController.html#GetPromotionList">GetPromotionList</a></li><li data-type='method'><a href="NineYi.Mall.Controllers_PromotionListController.html#HidePromotion">HidePromotion</a></li><li data-type='method'><a href="NineYi.Mall.Controllers_PromotionListController.html#TrackEvent">TrackEvent</a></li></ul></li><li><a href="NineYi.Mall.Directives_nsAddress.html">nsAddress</a></li><li><a href="NineYi.Mall.Directives_nsBasket.html">nsBasket</a></li><li><a href="NineYi.Mall.Filters_nsDotNetDateParser.html">nsDotNetDateParser</a></li><li><a href="NineYi.Mall.Services_PromotionV2Service.html">PromotionV2Service</a><ul class='methods'><li data-type='method'><a href="NineYi.Mall.Services_PromotionV2Service.html#Calculate">Calculate</a></li><li data-type='method'><a href="NineYi.Mall.Services_PromotionV2Service.html#GetDetail">GetDetail</a></li><li data-type='method'><a href="NineYi.Mall.Services_PromotionV2Service.html#GetList">GetList</a></li><li data-type='method'><a href="NineYi.Mall.Services_PromotionV2Service.html#GetSalePageList">GetSalePageList</a></li></ul></li><li><a href="NineYi.Mall.Utilities_DialogUtility.html">DialogUtility</a><ul class='methods'><li data-type='method'><a href="NineYi.Mall.Utilities_DialogUtility.html#AutoCloseNotice">AutoCloseNotice</a></li><li data-type='method'><a href="NineYi.Mall.Utilities_DialogUtility.html#Confirm">Confirm</a></li><li data-type='method'><a href="NineYi.Mall.Utilities_DialogUtility.html#Custom">Custom</a></li><li data-type='method'><a href="NineYi.Mall.Utilities_DialogUtility.html#Notice">Notice</a></li><li data-type='method'><a href="NineYi.Mall.Utilities_DialogUtility.html#Toast">Toast</a></li></ul></li><li><a href="NineYi.Theme.Components_CategoryMenuController.html">CategoryMenuController</a><ul class='methods'><li data-type='method'><a href="NineYi.Theme.Components_CategoryMenuController.html#SelectLevel1List">SelectLevel1List</a></li><li data-type='method'><a href="NineYi.Theme.Components_CategoryMenuController.html#SetActiveLink">SetActiveLink</a></li><li data-type='method'><a href="NineYi.Theme.Components_CategoryMenuController.html#TrackEvent">TrackEvent</a></li></ul></li></ul><h3>Namespaces</h3><ul><li><a href="NineYi.Mall.Controllers.html">Controllers</a></li><li><a href="NineYi.Mall.Directives.html">Directives</a></li><li><a href="NineYi.Mall.Filters.html">Filters</a></li><li><a href="NineYi.Mall.Services.html">Services</a></li><li><a href="NineYi.Theme.Components.html">Components</a></li></ul><h3>Tutorials</h3><ul><li><a href="tutorial-tutorials1.html">tutorials1</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">TypeScripts/app.module.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/// &lt;reference path="../Scripts/typings/angularjs/angular.d.ts"/>
+///**
+// NineYi
+// @namespace NineYi
+// */
+///**
+// Mall
+// @memberOf NineYi
+// @namespace NineYi.Mall
+// */
+var NineYi;
+(function (NineYi) {
+    var Mall;
+    (function (Mall) {
+        angular.module('NineYi.Mall', []);
+    })(Mall = NineYi.Mall || (NineYi.Mall = {}));
+})(NineYi || (NineYi = {}));
+var NineYi;
+(function (NineYi) {
+    var Mall;
+    (function (Mall) {
+        var Providers;
+        (function (Providers) {
+            angular.module('NineYi.Mall.Providers', []);
+        })(Providers = Mall.Providers || (Mall.Providers = {}));
+    })(Mall = NineYi.Mall || (NineYi.Mall = {}));
+})(NineYi || (NineYi = {}));
+var NineYi;
+(function (NineYi) {
+    var Mall;
+    (function (Mall) {
+        var Values;
+        (function (Values) {
+            angular.module('NineYi.Mall.Values', []);
+        })(Values = Mall.Values || (Mall.Values = {}));
+    })(Mall = NineYi.Mall || (NineYi.Mall = {}));
+})(NineYi || (NineYi = {}));
+/**
+ controller
+ @memberOf NineYi.Mall
+ @namespace NineYi.Mall.Controllers
+ */
+var NineYi;
+(function (NineYi) {
+    var Mall;
+    (function (Mall) {
+        var Controllers;
+        (function (Controllers) {
+            angular.module('NineYi.Mall.Controllers', ['NineYi.Mall.Values', 'NineYi.Mall.Services', 'NineYi.Mall.Factories', 'NineYi.Mall.Providers',
+                'NineYi.Mall.Utilities', 'NineYi.Mall.Templates', 'LocalStorageModule', 'facebook', 'ngCookies', 'NineYi.Theme.Components']);
+        })(Controllers = Mall.Controllers || (Mall.Controllers = {}));
+    })(Mall = NineYi.Mall || (NineYi.Mall = {}));
+})(NineYi || (NineYi = {}));
+/**
+ Directives
+ @memberOf NineYi.Mall
+ @namespace NineYi.Mall.Directives
+ */
+var NineYi;
+(function (NineYi) {
+    var Mall;
+    (function (Mall) {
+        var Directives;
+        (function (Directives) {
+            angular.module('NineYi.Mall.Directives', ['ngAnimate', 'NineYi.Mall.Utilities', 'NineYi.Mall.Templates', 'NineYi.Mall.Providers']);
+        })(Directives = Mall.Directives || (Mall.Directives = {}));
+    })(Mall = NineYi.Mall || (NineYi.Mall = {}));
+})(NineYi || (NineYi = {}));
+/**
+ Theme 元件
+ @memberOf NineYi.Mall
+ @namespace NineYi.Mall.Filters
+ */
+var NineYi;
+(function (NineYi) {
+    var Mall;
+    (function (Mall) {
+        var Filters;
+        (function (Filters) {
+            angular.module('NineYi.Mall.Filters', []);
+        })(Filters = Mall.Filters || (Mall.Filters = {}));
+    })(Mall = NineYi.Mall || (NineYi.Mall = {}));
+})(NineYi || (NineYi = {}));
+var NineYi;
+(function (NineYi) {
+    var Mall;
+    (function (Mall) {
+        var Factories;
+        (function (Factories) {
+            angular.module('NineYi.Mall.Factories', []);
+        })(Factories = Mall.Factories || (Mall.Factories = {}));
+    })(Mall = NineYi.Mall || (NineYi.Mall = {}));
+})(NineYi || (NineYi = {}));
+var NineYi;
+(function (NineYi) {
+    var Mall;
+    (function (Mall) {
+        var Inteceptors;
+        (function (Inteceptors) {
+            angular.module('NineYi.Mall.Inteceptors', ['NineYi.Mall.Utilities', 'NineYi.Mall.Configs']);
+        })(Inteceptors = Mall.Inteceptors || (Mall.Inteceptors = {}));
+    })(Mall = NineYi.Mall || (NineYi.Mall = {}));
+})(NineYi || (NineYi = {}));
+/**
+ API Services
+ @memberOf NineYi.Mall
+ @namespace NineYi.Mall.Services
+ */
+var NineYi;
+(function (NineYi) {
+    var Mall;
+    (function (Mall) {
+        var Services;
+        (function (Services) {
+            angular.module('NineYi.Mall.Services', ['NineYi.Mall.Configs', 'NineYi.Mall.Inteceptors', 'ui.bootstrap', 'ui.bootstrap.tpls']);
+        })(Services = Mall.Services || (Mall.Services = {}));
+    })(Mall = NineYi.Mall || (NineYi.Mall = {}));
+})(NineYi || (NineYi = {}));
+var NineYi;
+(function (NineYi) {
+    var Mall;
+    (function (Mall) {
+        var Utilities;
+        (function (Utilities) {
+            angular.module('NineYi.Mall.Utilities', ['cfp.loadingBar']);
+        })(Utilities = Mall.Utilities || (Mall.Utilities = {}));
+    })(Mall = NineYi.Mall || (NineYi.Mall = {}));
+})(NineYi || (NineYi = {}));
+var NineYi;
+(function (NineYi) {
+    var Mall;
+    (function (Mall) {
+        var Templates;
+        (function (Templates) {
+            angular.module('NineYi.Mall.Templates', []);
+        })(Templates = Mall.Templates || (Mall.Templates = {}));
+    })(Mall = NineYi.Mall || (NineYi.Mall = {}));
+})(NineYi || (NineYi = {}));
+///**
+// Theme
+// @memberOf NineYi
+// @namespace NineYi.Theme
+// */
+/**
+ Theme 元件
+ @memberOf NineYi.Theme
+ @namespace NineYi.Theme.Components
+ */
+var NineYi;
+(function (NineYi) {
+    var Theme;
+    (function (Theme) {
+        var Components;
+        (function (Components) {
+            angular.module('NineYi.Theme.Components', ['NineYi.Mall.Values', 'NineYi.Mall.Services', 'NineYi.Mall.Factories', 'NineYi.Mall.Inteceptors',
+                'NineYi.Mall.Utilities', 'NineYi.Mall.Templates', 'LocalStorageModule', 'facebook', 'ngCookies']);
+        })(Components = Theme.Components || (Theme.Components = {}));
+    })(Theme = NineYi.Theme || (NineYi.Theme = {}));
+})(NineYi || (NineYi = {}));
+//# sourceMappingURL=app.module.js.map</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Tue Jan 10 2017 15:21:32 GMT+0800 (CST) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

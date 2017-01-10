@@ -1,9 +1,5 @@
 /// <reference path="../../../typings/angularjs/angular.d.ts"/>
 /// <reference path="../../../Scripts/TypeLite.Net4.d.ts"/>
-/**
- controller
- @namespace NineYi.Mall.Controllers
- */
 var NineYi;
 (function (NineYi) {
     var Mall;
@@ -151,7 +147,7 @@ var NineYi;
                 }
                 /**
                  變換排序
-                 @method  NineYi.Mall.Controllers#PromotionListController#ChangeOrderBy
+                 @func  NineYi.Mall.Controllers#PromotionListController#ChangeOrderBy
                  @param {boolean} OrderByName 排序方式( 最新活動:Newest / 即將結束:ComingToEnd )
                  */
                 PromotionListController.prototype.ChangeOrderBy = function (OrderByName) {
@@ -171,7 +167,7 @@ var NineYi;
                 };
                 /**
                  * 瀑布流取得下50筆
-                 * @method  NineYi.Mall.Controllers#PromotionListController#GetNextPage
+                 * @func  NineYi.Mall.Controllers#PromotionListController#GetNextPage
                  */
                 PromotionListController.prototype.GetNextPage = function () {
                     var _this = this;
@@ -191,7 +187,7 @@ var NineYi;
                 };
                 /**
                  * 取得活動列表資料
-                 * @method  NineYi.Mall.Controllers#PromotionListController#GetPromotionList
+                 * @func  NineYi.Mall.Controllers#PromotionListController#GetPromotionList
                  * @param {number} ShopId 商店ID
                  * @param {string} OrderBy 排序方式
                  * @param {number} StartIndex 起始筆數
@@ -232,7 +228,7 @@ var NineYi;
                 };
                 /**
                  * 倒數計時時移除該活動
-                 * @method  NineYi.Mall.Controllers#PromotionListController#HidePromotion
+                 * @func  NineYi.Mall.Controllers#PromotionListController#HidePromotion
                  * @param {Date} EndDateTime 活動結束時
                  */
                 PromotionListController.prototype.HidePromotion = function (EndDateTime) {
@@ -246,7 +242,7 @@ var NineYi;
                 };
                 /**
                  * GA Track Event
-                 * @method  NineYi.Mall.Controllers#PromotionListController#TrackEvent
+                 * @func  NineYi.Mall.Controllers#PromotionListController#TrackEvent
                  */
                 PromotionListController.prototype.TrackEvent = function (Category, Action, Label, Value) {
                     this.GoogleAnalyticsUtility.TrackEvent(Category, Action, Label, Value);

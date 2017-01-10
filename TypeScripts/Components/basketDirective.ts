@@ -1,9 +1,5 @@
 /// <reference path="../../typings/angularjs/angular.d.ts"/>
 
-/**
- Directives
- @namespace NineYi.Mall.Directives
- */
 namespace NineYi.Mall.Directives {
     interface IBasketSalePageEntity {
         SalePageId: number;
@@ -59,19 +55,26 @@ namespace NineYi.Mall.Directives {
      *
      * @param {string} nsDiscountMessage 菜籃優惠提示訊息
      * @param {function} nsConfirmToShop 呼叫加入購物車後呼叫function
-     * @param {function} nsSalepageList 已加入菜籃商品列表
-     *
+     * @param {IBasketSalePageEntity[]} nsSalepageList 已加入菜籃商品列表
+     * @param {number} nsSalepageList.SalePageId 商品Id
+     * @param {number} nsSalepageList.SaleProductSKUId 加入商品所選SKU Id
+     * @param {string} nsSalepageList.Title  商品名稱
+     * @param {string} nsSalepageList.SalePageImageUrl 商品圖片
+     * @param {number} nsSalepageList.Price 原價
+     * @param {number} nsSalepageList.SuggestPrice 建議售價
+     * @param {boolean} nsSalepageList.IsSoldOut 是否賣完
+     * @param {number} nsSalepageList.Qty 所選數量
+     * @param {string} nsSalepageList.SkuLevel1 第一層所選sku
+     * @param {string} nsSalepageList.SkuLevel2 第二層所選sku
+     * @param {?boolean} nsSalepageList.IsNew 是否為新加入
+     * @param {?boolean} nsSalepageList.IsRemove 是否被刪除
      *
      * @example
      * <caption>我是範例</caption>
-     * <div ns-address
-     *      ns-city="city"
-     *      ns-zipcode="zipcode"
-     *      ns-district="district"
-     *      ns-addressdetail="addressdetail"
-     *      ns-form-title="title"
-     *      ns-is-required="true"
-     *      ns-submitted="true">
+     * <div ns-basket
+     *      ns-discount-message="Ctrl.message"
+     *      ns-salepage-list="Ctrl.salepageList"
+     *      ns-confirm-to-shop="Ctrl.AddToCart()">
      * </div>
      */
     export class BasketDirective implements ng.IDirective {
@@ -121,7 +124,7 @@ namespace NineYi.Mall.Directives {
                         } else {
                             var ConditionHtml = scope.DiscountMessage.PromotionConditionTitle.replace(ConditionNum, `<span class='basket-footer-highlight'>${ConditionNum}</span>`);
                             scope.DiscountMessageHtml = this.$sce.trustAsHtml(`${ConditionHtml}，${DiscountHtml}`);
-                            scope.DiscountSubMessageHtml = this.$sce.trustAsHtml(scope.DiscountMessage.RecommandConditionTitle ==='' ? '&nbsp' : scope.DiscountMessage.RecommandConditionTitle);
+                            scope.DiscountSubMessageHtml = this.$sce.trustAsHtml(scope.DiscountMessage.RecommandConditionTitle === '' ? '&nbsp' : scope.DiscountMessage.RecommandConditionTitle);
                         }
                     }
                 });
@@ -133,12 +136,12 @@ namespace NineYi.Mall.Directives {
                             scope.IsOpen = true;
                         }
                         //// 針對新加入的item，做淡入效果後移除動畫
-                        var lastIndex = newVal.length-1;
+                        var lastIndex = newVal.length - 1;
                         newVal[lastIndex].IsNew = true;
 
                         this.$timeout(()=> {
                             newVal[lastIndex].IsNew = false;
-                        },800);
+                        }, 800);
                     }
                 });
                 scope.RemoveItem = (SalePageId:number, SKUId:number)=> {
@@ -166,7 +169,7 @@ namespace NineYi.Mall.Directives {
                             salepageId: SalePageId,
                             skuId: SKUId
                         });
-                    },600);
+                    }, 600);
 
                 }
             }

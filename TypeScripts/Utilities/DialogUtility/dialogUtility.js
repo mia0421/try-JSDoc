@@ -5,12 +5,28 @@ var NineYi;
     (function (Mall) {
         var Utilities;
         (function (Utilities) {
+            /**
+             * 各種popup視窗
+             * @class NineYi.Mall.Utilities#DialogUtility
+             * @classdesc 各種popup視窗ex:Notice,AutoCloseNotice
+             *
+             */
             var DialogUtility = (function () {
                 function DialogUtility($q, $modal) {
                     this.$q = $q;
                     this.$modal = $modal;
                 }
-                //// 通知視窗
+                /**
+                 * 通知視窗
+                 * @func NineYi.Mall.Utilities#DialogUtility#Notice
+                 *
+                 * @param {string} message 顯示訊息
+                 * @param {string} [confirmTitle=確認] 按鈕顯示字樣
+                 * @param {boolean=} useNewLine 顯示特定樣式
+                 * @example
+                 * <caption>我是範例</caption>
+                 * this.dialogUtility.Notice('跟你說一個秘密','好喔');
+                 */
                 DialogUtility.prototype.Notice = function (message, confirmTitle, useNewLine) {
                     if (confirmTitle === void 0) { confirmTitle = '確認'; }
                     var defer = this.$q.defer();
@@ -36,7 +52,13 @@ var NineYi;
                     modalInstance.result.then(defer.resolve, defer.reject);
                     return defer.promise;
                 };
-                //// 會自動關閉的通知視窗
+                /**
+                 * 會自動關閉的通知視窗
+                 * @func NineYi.Mall.Utilities#DialogUtility#AutoCloseNotice
+                 *
+                 * @param {string} message 顯示訊息
+                 * @param {string} [confirmTitle=確認] 按鈕顯示字樣
+                 */
                 DialogUtility.prototype.AutoCloseNotice = function (message, confirmTitle) {
                     if (confirmTitle === void 0) { confirmTitle = '確認'; }
                     var defer = this.$q.defer();
@@ -63,7 +85,16 @@ var NineYi;
                     modalInstance.result.then(defer.resolve, defer.reject);
                     return defer.promise;
                 };
-                //// 確認視窗
+                /**
+                 * 確認視窗
+                 * @func NineYi.Mall.Utilities#DialogUtility#Confirm
+                 *
+                 * @param {string} message 顯示訊息
+                 * @param {string} [confirmTitle=確認] resolve按鈕文字
+                 * @param {string} [cancelTitle=取消] reject按鈕文字
+                 * @param {boolean} [showClose=true 按鈕顯示字樣
+                 * @return {IPromise.<any>}
+                 */
                 DialogUtility.prototype.Confirm = function (message, confirmTitle, cancelTitle, showClose) {
                     if (confirmTitle === void 0) { confirmTitle = '確認'; }
                     if (cancelTitle === void 0) { cancelTitle = '取消'; }
@@ -92,6 +123,19 @@ var NineYi;
                     modalInstance.result.then(defer.resolve, defer.reject);
                     return defer.promise;
                 };
+                /**
+                 * 自訂通知視窗
+                 * @func NineYi.Mall.Utilities#DialogUtility#Custom
+                 * @param  {ICustomDialogParams} parms 自訂通知視窗參數
+                 * @param {string} parms.title 抬頭
+                 * @param {any} parms.model dialog頁面用參數
+                 * @param {any=} parms.backdrop 這是什麼...
+                 * @param {string} parms.templateUrl 引用頁面路徑
+                 * @param {string} parms.windowClass 父層class名稱
+                 * @param {string} parms.controller ctrl名稱
+                 *
+                 * @return {IPromise.<any>}
+                 */
                 DialogUtility.prototype.Custom = function (parms) {
                     var defer = this.$q.defer();
                     var modelSettingOption = {
@@ -115,14 +159,11 @@ var NineYi;
                     return defer.promise;
                 };
                 /**
-                 * @ngdoc function
-                 * @name DialogUtility#Toast
-                 * @methodOf  NineYi.Mall.Utilities:DialogUtility
-                 *
-                 * @description
                  * Toast純文字視窗
-                 * message ＝> 顯示訊息
-                 * autoClose => 顯示幾秒消失(毫秒)
+                 * @func NineYi.Mall.Utilities#DialogUtility#Toast
+                 *
+                 * @param {string} message 顯示訊息
+                 * @param {number} autoClose 顯示幾秒消失(毫秒)
                  */
                 DialogUtility.prototype.Toast = function (message, autoClose) {
                     var defer = this.$q.defer();

@@ -1,10 +1,7 @@
 /// <reference path="../../../typings/angularjs/angular.d.ts"/>
 /// <reference path="../../../Scripts/TypeLite.Net4.d.ts"/>
 
-/**
- controller
- @namespace NineYi.Mall.Controllers
- */
+
 module NineYi.Mall.Controllers {
     /**
      * 活動頁列表list controller
@@ -178,7 +175,7 @@ module NineYi.Mall.Controllers {
 
         /**
          變換排序
-         @method  NineYi.Mall.Controllers#PromotionListController#ChangeOrderBy
+         @func  NineYi.Mall.Controllers#PromotionListController#ChangeOrderBy
          @param {boolean} OrderByName 排序方式( 最新活動:Newest / 即將結束:ComingToEnd )
          */
         ChangeOrderBy(OrderByName:string):void {
@@ -202,7 +199,7 @@ module NineYi.Mall.Controllers {
 
         /**
          * 瀑布流取得下50筆
-         * @method  NineYi.Mall.Controllers#PromotionListController#GetNextPage
+         * @func  NineYi.Mall.Controllers#PromotionListController#GetNextPage
          */
         GetNextPage():void {
             this.IsLoading = true;
@@ -223,7 +220,7 @@ module NineYi.Mall.Controllers {
 
         /**
          * 取得活動列表資料
-         * @method  NineYi.Mall.Controllers#PromotionListController#GetPromotionList
+         * @func  NineYi.Mall.Controllers#PromotionListController#GetPromotionList
          * @param {number} ShopId 商店ID
          * @param {string} OrderBy 排序方式
          * @param {number} StartIndex 起始筆數
@@ -267,7 +264,7 @@ module NineYi.Mall.Controllers {
 
         /**
          * 倒數計時時移除該活動
-         * @method  NineYi.Mall.Controllers#PromotionListController#HidePromotion
+         * @func  NineYi.Mall.Controllers#PromotionListController#HidePromotion
          * @param {Date} EndDateTime 活動結束時
          */
         HidePromotion(EndDateTime:Date):void {
@@ -282,7 +279,7 @@ module NineYi.Mall.Controllers {
 
         /**
          * GA Track Event
-         * @method  NineYi.Mall.Controllers#PromotionListController#TrackEvent
+         * @func  NineYi.Mall.Controllers#PromotionListController#TrackEvent
          */
         TrackEvent(Category:string, Action:string, Label?:string, Value?:number) {
             this.GoogleAnalyticsUtility.TrackEvent(Category, Action, Label, Value);

@@ -1,8 +1,164 @@
-/// <reference path="../../typings/angularjs/angular.d.ts"/>
+/// <reference path="../Scripts/typings/angularjs/angular.d.ts"/>
+///**
+// NineYi
+// @namespace NineYi
+// */
+///**
+// Mall
+// @memberOf NineYi
+// @namespace NineYi.Mall
+// */
+var NineYi;
+(function (NineYi) {
+    var Mall;
+    (function (Mall) {
+        angular.module('NineYi.Mall', []);
+    })(Mall = NineYi.Mall || (NineYi.Mall = {}));
+})(NineYi || (NineYi = {}));
+var NineYi;
+(function (NineYi) {
+    var Mall;
+    (function (Mall) {
+        var Providers;
+        (function (Providers) {
+            angular.module('NineYi.Mall.Providers', []);
+        })(Providers = Mall.Providers || (Mall.Providers = {}));
+    })(Mall = NineYi.Mall || (NineYi.Mall = {}));
+})(NineYi || (NineYi = {}));
+var NineYi;
+(function (NineYi) {
+    var Mall;
+    (function (Mall) {
+        var Values;
+        (function (Values) {
+            angular.module('NineYi.Mall.Values', []);
+        })(Values = Mall.Values || (Mall.Values = {}));
+    })(Mall = NineYi.Mall || (NineYi.Mall = {}));
+})(NineYi || (NineYi = {}));
+/**
+ controller
+ @memberOf NineYi.Mall
+ @namespace NineYi.Mall.Controllers
+ */
+var NineYi;
+(function (NineYi) {
+    var Mall;
+    (function (Mall) {
+        var Controllers;
+        (function (Controllers) {
+            angular.module('NineYi.Mall.Controllers', ['NineYi.Mall.Values', 'NineYi.Mall.Services', 'NineYi.Mall.Factories', 'NineYi.Mall.Providers',
+                'NineYi.Mall.Utilities', 'NineYi.Mall.Templates', 'LocalStorageModule', 'facebook', 'ngCookies', 'NineYi.Theme.Components']);
+        })(Controllers = Mall.Controllers || (Mall.Controllers = {}));
+    })(Mall = NineYi.Mall || (NineYi.Mall = {}));
+})(NineYi || (NineYi = {}));
 /**
  Directives
+ @memberOf NineYi.Mall
  @namespace NineYi.Mall.Directives
  */
+var NineYi;
+(function (NineYi) {
+    var Mall;
+    (function (Mall) {
+        var Directives;
+        (function (Directives) {
+            angular.module('NineYi.Mall.Directives', ['ngAnimate', 'NineYi.Mall.Utilities', 'NineYi.Mall.Templates', 'NineYi.Mall.Providers']);
+        })(Directives = Mall.Directives || (Mall.Directives = {}));
+    })(Mall = NineYi.Mall || (NineYi.Mall = {}));
+})(NineYi || (NineYi = {}));
+/**
+ Theme 元件
+ @memberOf NineYi.Mall
+ @namespace NineYi.Mall.Filters
+ */
+var NineYi;
+(function (NineYi) {
+    var Mall;
+    (function (Mall) {
+        var Filters;
+        (function (Filters) {
+            angular.module('NineYi.Mall.Filters', []);
+        })(Filters = Mall.Filters || (Mall.Filters = {}));
+    })(Mall = NineYi.Mall || (NineYi.Mall = {}));
+})(NineYi || (NineYi = {}));
+var NineYi;
+(function (NineYi) {
+    var Mall;
+    (function (Mall) {
+        var Factories;
+        (function (Factories) {
+            angular.module('NineYi.Mall.Factories', []);
+        })(Factories = Mall.Factories || (Mall.Factories = {}));
+    })(Mall = NineYi.Mall || (NineYi.Mall = {}));
+})(NineYi || (NineYi = {}));
+var NineYi;
+(function (NineYi) {
+    var Mall;
+    (function (Mall) {
+        var Inteceptors;
+        (function (Inteceptors) {
+            angular.module('NineYi.Mall.Inteceptors', ['NineYi.Mall.Utilities', 'NineYi.Mall.Configs']);
+        })(Inteceptors = Mall.Inteceptors || (Mall.Inteceptors = {}));
+    })(Mall = NineYi.Mall || (NineYi.Mall = {}));
+})(NineYi || (NineYi = {}));
+/**
+ API Services
+ @memberOf NineYi.Mall
+ @namespace NineYi.Mall.Services
+ */
+var NineYi;
+(function (NineYi) {
+    var Mall;
+    (function (Mall) {
+        var Services;
+        (function (Services) {
+            angular.module('NineYi.Mall.Services', ['NineYi.Mall.Configs', 'NineYi.Mall.Inteceptors', 'ui.bootstrap', 'ui.bootstrap.tpls']);
+        })(Services = Mall.Services || (Mall.Services = {}));
+    })(Mall = NineYi.Mall || (NineYi.Mall = {}));
+})(NineYi || (NineYi = {}));
+var NineYi;
+(function (NineYi) {
+    var Mall;
+    (function (Mall) {
+        var Utilities;
+        (function (Utilities) {
+            angular.module('NineYi.Mall.Utilities', ['cfp.loadingBar']);
+        })(Utilities = Mall.Utilities || (Mall.Utilities = {}));
+    })(Mall = NineYi.Mall || (NineYi.Mall = {}));
+})(NineYi || (NineYi = {}));
+var NineYi;
+(function (NineYi) {
+    var Mall;
+    (function (Mall) {
+        var Templates;
+        (function (Templates) {
+            angular.module('NineYi.Mall.Templates', []);
+        })(Templates = Mall.Templates || (Mall.Templates = {}));
+    })(Mall = NineYi.Mall || (NineYi.Mall = {}));
+})(NineYi || (NineYi = {}));
+///**
+// Theme
+// @memberOf NineYi
+// @namespace NineYi.Theme
+// */
+/**
+ Theme 元件
+ @memberOf NineYi.Theme
+ @namespace NineYi.Theme.Components
+ */
+var NineYi;
+(function (NineYi) {
+    var Theme;
+    (function (Theme) {
+        var Components;
+        (function (Components) {
+            angular.module('NineYi.Theme.Components', ['NineYi.Mall.Values', 'NineYi.Mall.Services', 'NineYi.Mall.Factories', 'NineYi.Mall.Inteceptors',
+                'NineYi.Mall.Utilities', 'NineYi.Mall.Templates', 'LocalStorageModule', 'facebook', 'ngCookies']);
+        })(Components = Theme.Components || (Theme.Components = {}));
+    })(Theme = NineYi.Theme || (NineYi.Theme = {}));
+})(NineYi || (NineYi = {}));
+//# sourceMappingURL=app.module.js.map
+/// <reference path="../../typings/angularjs/angular.d.ts"/>
 var NineYi;
 (function (NineYi) {
     var Mall;
@@ -17,17 +173,13 @@ var NineYi;
                      * ## 地址元件
                      * 固定格式用於選擇城市行政區並且輸入地址的表單
                      *
-                     * @param {string} nsCity 城市選單
-                     * @param {string} nsZipcode 當前郵遞區號
-                     * @param {string} nsDistrict 行政區
-                     * @param {string} nsAddressdetail 地址
-                     * @param {string} nsFormTitle 表單抬頭
-                     * @param {string} nsIsRequired 是否必填
-                     * @param {string=} nsSubmitted 是否已經Submitted
-                     *
-                     * @param {Object} employee - The employee who is responsible for the project.
-                     * @param {string} employee.name - The name of the employee.
-                     * @param {string} employee.department - The employee's department.
+                     * @param {!string} nsCity 城市選單(必傳)
+                     * @param {!string} nsZipcode 當前郵遞區號(必傳)
+                     * @param {!string} nsDistrict 行政區(必傳)
+                     * @param {!string} nsAddressdetail 地址(必傳)
+                     * @param {?string} nsFormTitle 表單抬頭(可null)
+                     * @param {!string} nsIsRequired 是否必填(必傳)
+                     * @param {string=} nsSubmitted 是否已經Submitted(可選參數)
                      *
                      * @example
                      * <caption>我是範例</caption>
@@ -102,6 +254,36 @@ var NineYi;
     (function (Mall) {
         var Directives;
         (function (Directives) {
+            /**
+             * @class NineYi.Mall.Directives#nsBasket
+             * @classdesc
+             * ## 菜籃選單
+             * 目前用於折扣活動明細頁
+             *
+             * @param {string} nsDiscountMessage 菜籃優惠提示訊息
+             * @param {function} nsConfirmToShop 呼叫加入購物車後呼叫function
+             * @param {IBasketSalePageEntity[]} nsSalepageList 已加入菜籃商品列表
+             * @param {number} nsSalepageList.SalePageId 商品Id
+             * @param {number} nsSalepageList.SaleProductSKUId 加入商品所選SKU Id
+             * @param {string} nsSalepageList.Title  商品名稱
+             * @param {string} nsSalepageList.SalePageImageUrl 商品圖片
+             * @param {number} nsSalepageList.Price 原價
+             * @param {number} nsSalepageList.SuggestPrice 建議售價
+             * @param {boolean} nsSalepageList.IsSoldOut 是否賣完
+             * @param {number} nsSalepageList.Qty 所選數量
+             * @param {string} nsSalepageList.SkuLevel1 第一層所選sku
+             * @param {string} nsSalepageList.SkuLevel2 第二層所選sku
+             * @param {?boolean} nsSalepageList.IsNew 是否為新加入
+             * @param {?boolean} nsSalepageList.IsRemove 是否被刪除
+             *
+             * @example
+             * <caption>我是範例</caption>
+             * <div ns-basket
+             *      ns-discount-message="Ctrl.message"
+             *      ns-salepage-list="Ctrl.salepageList"
+             *      ns-confirm-to-shop="Ctrl.AddToCart()">
+             * </div>
+             */
             var BasketDirective = (function () {
                 function BasketDirective($log, $timeout, $sce, DeviceValue) {
                     var _this = this;
@@ -208,6 +390,16 @@ var NineYi;
     (function (Mall) {
         var Filters;
         (function (Filters) {
+            /**
+             * 解析MS Date格式Filter
+             * @class NineYi.Mall.Filters#nsDotNetDateParser
+             * @classdesc 解析MS Date格式Filter
+             * @param {string} date api提供之MS Date格式字串
+             *
+             * @example
+             * <caption>我是範例</caption>
+             * {{Ctrl.InvoiceSentDateTime|nsDotNetDateParser|date:'yyyy/MM/dd'}}
+             */
             var DotNetDateParser = (function () {
                 function DotNetDateParser() {
                 }
@@ -234,10 +426,6 @@ var NineYi;
 //# sourceMappingURL=dotnetDateFilter.js.map
 /// <reference path="../../typings/angularjs/angular.d.ts"/>
 /// <reference path="../../Scripts/TypeLite.Net4.d.ts"/>
-/**
- API Services
- @namespace NineYi.Mall.Services
- */
 var NineYi;
 (function (NineYi) {
     var Mall;
@@ -357,10 +545,6 @@ var NineYi;
 //# sourceMappingURL=promotionV2Service.js.map
 /// <reference path="../../../typings/angularjs/angular.d.ts"/>
 /// <reference path="../../../Scripts/TypeLite.Net4.d.ts"/>
-/**
- controller
- @namespace NineYi.Mall.Controllers
- */
 var NineYi;
 (function (NineYi) {
     var Mall;
@@ -508,7 +692,7 @@ var NineYi;
                 }
                 /**
                  變換排序
-                 @method  NineYi.Mall.Controllers#PromotionListController#ChangeOrderBy
+                 @func  NineYi.Mall.Controllers#PromotionListController#ChangeOrderBy
                  @param {boolean} OrderByName 排序方式( 最新活動:Newest / 即將結束:ComingToEnd )
                  */
                 PromotionListController.prototype.ChangeOrderBy = function (OrderByName) {
@@ -528,7 +712,7 @@ var NineYi;
                 };
                 /**
                  * 瀑布流取得下50筆
-                 * @method  NineYi.Mall.Controllers#PromotionListController#GetNextPage
+                 * @func  NineYi.Mall.Controllers#PromotionListController#GetNextPage
                  */
                 PromotionListController.prototype.GetNextPage = function () {
                     var _this = this;
@@ -548,7 +732,7 @@ var NineYi;
                 };
                 /**
                  * 取得活動列表資料
-                 * @method  NineYi.Mall.Controllers#PromotionListController#GetPromotionList
+                 * @func  NineYi.Mall.Controllers#PromotionListController#GetPromotionList
                  * @param {number} ShopId 商店ID
                  * @param {string} OrderBy 排序方式
                  * @param {number} StartIndex 起始筆數
@@ -589,7 +773,7 @@ var NineYi;
                 };
                 /**
                  * 倒數計時時移除該活動
-                 * @method  NineYi.Mall.Controllers#PromotionListController#HidePromotion
+                 * @func  NineYi.Mall.Controllers#PromotionListController#HidePromotion
                  * @param {Date} EndDateTime 活動結束時
                  */
                 PromotionListController.prototype.HidePromotion = function (EndDateTime) {
@@ -603,7 +787,7 @@ var NineYi;
                 };
                 /**
                  * GA Track Event
-                 * @method  NineYi.Mall.Controllers#PromotionListController#TrackEvent
+                 * @func  NineYi.Mall.Controllers#PromotionListController#TrackEvent
                  */
                 PromotionListController.prototype.TrackEvent = function (Category, Action, Label, Value) {
                     this.GoogleAnalyticsUtility.TrackEvent(Category, Action, Label, Value);
@@ -638,12 +822,28 @@ var NineYi;
     (function (Mall) {
         var Utilities;
         (function (Utilities) {
+            /**
+             * 各種popup視窗
+             * @class NineYi.Mall.Utilities#DialogUtility
+             * @classdesc 各種popup視窗ex:Notice,AutoCloseNotice
+             *
+             */
             var DialogUtility = (function () {
                 function DialogUtility($q, $modal) {
                     this.$q = $q;
                     this.$modal = $modal;
                 }
-                //// 通知視窗
+                /**
+                 * 通知視窗
+                 * @func NineYi.Mall.Utilities#DialogUtility#Notice
+                 *
+                 * @param {string} message 顯示訊息
+                 * @param {string} [confirmTitle=確認] 按鈕顯示字樣
+                 * @param {boolean=} useNewLine 顯示特定樣式
+                 * @example
+                 * <caption>我是範例</caption>
+                 * this.dialogUtility.Notice('跟你說一個秘密','好喔');
+                 */
                 DialogUtility.prototype.Notice = function (message, confirmTitle, useNewLine) {
                     if (confirmTitle === void 0) { confirmTitle = '確認'; }
                     var defer = this.$q.defer();
@@ -669,7 +869,13 @@ var NineYi;
                     modalInstance.result.then(defer.resolve, defer.reject);
                     return defer.promise;
                 };
-                //// 會自動關閉的通知視窗
+                /**
+                 * 會自動關閉的通知視窗
+                 * @func NineYi.Mall.Utilities#DialogUtility#AutoCloseNotice
+                 *
+                 * @param {string} message 顯示訊息
+                 * @param {string} [confirmTitle=確認] 按鈕顯示字樣
+                 */
                 DialogUtility.prototype.AutoCloseNotice = function (message, confirmTitle) {
                     if (confirmTitle === void 0) { confirmTitle = '確認'; }
                     var defer = this.$q.defer();
@@ -696,7 +902,16 @@ var NineYi;
                     modalInstance.result.then(defer.resolve, defer.reject);
                     return defer.promise;
                 };
-                //// 確認視窗
+                /**
+                 * 確認視窗
+                 * @func NineYi.Mall.Utilities#DialogUtility#Confirm
+                 *
+                 * @param {string} message 顯示訊息
+                 * @param {string} [confirmTitle=確認] resolve按鈕文字
+                 * @param {string} [cancelTitle=取消] reject按鈕文字
+                 * @param {boolean} [showClose=true 按鈕顯示字樣
+                 * @return {IPromise.<any>}
+                 */
                 DialogUtility.prototype.Confirm = function (message, confirmTitle, cancelTitle, showClose) {
                     if (confirmTitle === void 0) { confirmTitle = '確認'; }
                     if (cancelTitle === void 0) { cancelTitle = '取消'; }
@@ -725,6 +940,19 @@ var NineYi;
                     modalInstance.result.then(defer.resolve, defer.reject);
                     return defer.promise;
                 };
+                /**
+                 * 自訂通知視窗
+                 * @func NineYi.Mall.Utilities#DialogUtility#Custom
+                 * @param  {ICustomDialogParams} parms 自訂通知視窗參數
+                 * @param {string} parms.title 抬頭
+                 * @param {any} parms.model dialog頁面用參數
+                 * @param {any=} parms.backdrop 這是什麼...
+                 * @param {string} parms.templateUrl 引用頁面路徑
+                 * @param {string} parms.windowClass 父層class名稱
+                 * @param {string} parms.controller ctrl名稱
+                 *
+                 * @return {IPromise.<any>}
+                 */
                 DialogUtility.prototype.Custom = function (parms) {
                     var defer = this.$q.defer();
                     var modelSettingOption = {
@@ -748,14 +976,11 @@ var NineYi;
                     return defer.promise;
                 };
                 /**
-                 * @ngdoc function
-                 * @name DialogUtility#Toast
-                 * @methodOf  NineYi.Mall.Utilities:DialogUtility
-                 *
-                 * @description
                  * Toast純文字視窗
-                 * message ＝> 顯示訊息
-                 * autoClose => 顯示幾秒消失(毫秒)
+                 * @func NineYi.Mall.Utilities#DialogUtility#Toast
+                 *
+                 * @param {string} message 顯示訊息
+                 * @param {number} autoClose 顯示幾秒消失(毫秒)
                  */
                 DialogUtility.prototype.Toast = function (message, autoClose) {
                     var defer = this.$q.defer();
@@ -791,10 +1016,6 @@ var NineYi;
 //# sourceMappingURL=dialogUtility.js.map
 /// <reference path="../../../typings/angularjs/angular.d.ts"/>
 /// <reference path="../../../Scripts/TypeLite.Net4.d.ts"/>
-/**
- Theme 大C元件
- @namespace NineYi.Theme.Components
- */
 var NineYi;
 (function (NineYi) {
     var Theme;

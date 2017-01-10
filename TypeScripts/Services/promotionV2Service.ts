@@ -1,9 +1,6 @@
 /// <reference path="../../typings/angularjs/angular.d.ts"/>
 /// <reference path="../../Scripts/TypeLite.Net4.d.ts"/>
-/**
- API Services
- @namespace NineYi.Mall.Services
- */
+
 namespace NineYi.Mall.Services {
     export class PromotionV2Service {
         static $inject = ['Mall.Config', '$q', '$http'];

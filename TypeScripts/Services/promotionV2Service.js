@@ -1,9 +1,5 @@
 /// <reference path="../../typings/angularjs/angular.d.ts"/>
 /// <reference path="../../Scripts/TypeLite.Net4.d.ts"/>
-/**
- API Services
- @namespace NineYi.Mall.Services
- */
 var NineYi;
 (function (NineYi) {
     var Mall;

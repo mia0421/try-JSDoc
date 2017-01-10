@@ -1,9 +1,5 @@
 /// <reference path="../../../typings/angularjs/angular.d.ts"/>
 /// <reference path="../../../Scripts/TypeLite.Net4.d.ts"/>
-/**
- Theme 大C元件
- @namespace NineYi.Theme.Components
- */
 var NineYi;
 (function (NineYi) {
     var Theme;
